@@ -13,7 +13,7 @@ main = hspecWith defaultConfig {configFastFail = True} specs
 specs :: Spec
 specs = do
 
-          let x `matchesMap` y = x `shouldBe` (Right . fromList) y
+          let x `matchesMap` y = x `shouldBe` (Success . fromList) y
 
           describe "nucleotideCounts" $ do
 
